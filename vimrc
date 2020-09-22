@@ -9,35 +9,36 @@ endif
 " Install following plugins with vim-plug
 call plug#begin()
 Plug 'tpope/vim-sensible'
-Plug 'tmux-plugins/vim-tmux'
-
-"Plug 'itchyny/lightline.vim'
-"Plug 'arcticicestudio/nord-vim'
-"
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'godlygeek/tabular'
 Plug 'tpope/vim-repeat'
-Plug 'mg979/vim-visual-multi'
-Plug 'flazz/vim-colorschemes'
+Plug 'tpope/vim-speeddating'
+Plug 'tmux-plugins/vim-tmux'
+
+"Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'arcticicestudio/nord-vim'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'flazz/vim-colorschemes'
+
+Plug 'preservim/tagbar'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
+
+Plug 'godlygeek/tabular'
+"Plug 'mg979/vim-visual-multi'
 Plug 'sheerun/vim-polyglot'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'tpope/vim-speeddating'
-Plug 'frazrepo/vim-rainbow'
-Plug 'preservim/nerdcommenter'
 Plug 'farmergreg/vim-lastplace'
+Plug 'frazrepo/vim-rainbow'
 
 call plug#end()
 
 " set color theme
 "colorscheme BlackSea
 colorscheme nord
-let g:airline_theme='papercolor'
+let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -71,3 +72,7 @@ set mouse=a
 " inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 " inoremap <C-tab>   <Esc>:tabnext<CR>i
 " inoremap <C-t>     <Esc>:tabnew<CR>
+
+
+
+map <C-N> :NERDTreeToggle<CR>
