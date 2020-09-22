@@ -1,4 +1,5 @@
 # .zshrc by CMC
+
 # setup zgen
 export ZGEN_DIR="${ZDOTDIR:-$HOME}"/.zgen
 
@@ -8,7 +9,6 @@ export ZGEN_DIR="${ZDOTDIR:-$HOME}"/.zgen
 # to monitor plugin changes in files automatically use ZGEN_RESET_ON_CHANGE or run `zgen reset` manually
 ZGEN_RESET_ON_CHANGE=(
   ${ZDOTDIR:-$HOME}/.zshrc
-#  ${ZDOTDIR:-$HOME}/.zsh_plugins
 )
 
 # load zgen plugin manager
@@ -46,6 +46,7 @@ if ! zgen saved; then
   # prezto options
   zgen prezto editor key-bindings 'emacs'
   zgen prezto '*:*' color 'yes'
+  zgen presto utility safe-ops 'no'
   zgen prezto terminal auto-title 'always'
   zgen prezto syntax-highlighting color 'yes'
   zgen prezto syntax-highlighting highlighters \

@@ -6,3 +6,9 @@ if [[ "$OSTYPE" = "darwin"* ]]; then
 	MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
+if [[ -d $HOME/.sdkman/ ]]; then
+	source "$HOME/.sdkman/bin/sdkman-init.sh"
+# else
+# 	curl -s "https://get.sdkman.io" | bash
+# 	source "$HOME/.sdkman/bin/sdkman-init.sh"
+fi

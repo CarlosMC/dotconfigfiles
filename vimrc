@@ -32,18 +32,21 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'farmergreg/vim-lastplace'
 Plug 'frazrepo/vim-rainbow'
-
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
-" set color theme
-"colorscheme BlackSea
-colorscheme nord
+" set lightline.vim statusline/tabline theme
+"let g:lightline = { 'colorscheme': 'nord', }
 let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
-" set lightline.vim statusline/tabline theme
-"let g:lightline = { 'colorscheme': 'nord', }
+let g:nord_bold_vertical_split_line = 1
+"let g:nord_cursor_line_number_background = 0
+
+" set color theme
+"colorscheme BlackSea
+colorscheme nord
 
 " active Rainbow Parentheses Improved globally
 let g:rainbow_active = 1
@@ -61,7 +64,7 @@ set number
 set cursorline
 ""set cursorcolumn
 
-" if suppoerted enable mouse
+" if supported enable mouse
 set mouse=a
 
 
@@ -72,7 +75,3 @@ set mouse=a
 " inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 " inoremap <C-tab>   <Esc>:tabnext<CR>i
 " inoremap <C-t>     <Esc>:tabnew<CR>
-
-
-
-map <C-N> :NERDTreeToggle<CR>
