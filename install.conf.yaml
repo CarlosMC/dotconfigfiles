@@ -10,6 +10,7 @@
     ~/.zprofile: zprofile
     ~/.p10k.zsh: p10k.zsh
     ~/.tmux.conf: tmux.conf
+    ~/.zsh-dircolors.config: zsh-dircolors.config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
