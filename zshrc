@@ -20,33 +20,11 @@ if ! zgen saved; then
   zgen load seletskiy/zsh-zgen-compinit-tweak
   zgen load unixorn/autoupdate-zgen
 
-  # prezto and modules
-  zgen prezto
-   zgen prezto autosuggestions
-   zgen prezto syntax-highlighting
-   zgen prezto completion
-   zgen prezto history-substring-search
-   zgen prezto archive
-   zgen prezto environment
-   zgen prezto terminal
-   zgen prezto editor
-   zgen prezto history
-   zgen prezto directory
-   zgen prezto spectrum
-   zgen prezto utility
-   zgen prezto prompt
-   zgen prezto git
-   zgen prezto osx
-   zgen prezto tmux
-   zgen prezto fasd
-   zgen prezto homebrew
-   zgen prezto spectrum
-   zgen prezto docker
-
   # prezto options
   zgen prezto editor key-bindings 'emacs'
   zgen prezto '*:*' color 'yes'
-  zgen presto utility safe-ops 'no'
+  zgen prezto '*:*' case-sensitive 'no'
+  zgen prezto utility safe-ops 'no'
   zgen prezto terminal auto-title 'always'
   zgen prezto syntax-highlighting color 'yes'
   zgen prezto syntax-highlighting highlighters \
@@ -59,6 +37,30 @@ if ! zgen saved; then
 
   # set prompt theme
   zgen prezto prompt theme 'powerlevel10k'
+ 
+ # prezto and modules
+  zgen prezto
+   zgen prezto utility
+   zgen prezto completion
+   zgen prezto autosuggestions
+   zgen prezto syntax-highlighting
+   zgen prezto history-substring-search
+   zgen prezto archive
+   zgen prezto environment
+   zgen prezto terminal
+   zgen prezto editor
+   zgen prezto history
+   zgen prezto directory
+   zgen prezto spectrum
+   zgen prezto prompt
+   zgen prezto git
+   zgen prezto osx
+   zgen prezto tmux
+   zgen prezto fasd
+   zgen prezto homebrew
+   zgen prezto spectrum
+   zgen prezto docker
+
 
   # load external or customs plugin script
   zgen load ael-code/zsh-colored-man-pages
@@ -74,12 +76,6 @@ if ! zgen saved; then
   zgen save
 fi
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
